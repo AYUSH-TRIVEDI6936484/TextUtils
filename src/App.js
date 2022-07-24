@@ -7,24 +7,24 @@ import React, { useState } from 'react';
 
 function App() {
   const [mode, setmode] = useState('light');
-  const [txt,settxt]=useState('Enable dark mode')
+  const [txt, settxt] = useState('Enable dark mode')
   const change = () => {
     if (mode === 'light') {
       setmode('dark')
       settxt('Enable Light Mode');
-      document.body.style.backgroundColor='#042743';
+      document.body.style.backgroundColor = '#042743';
     }
-    else{
+    else {
       setmode('light')
       settxt('Enable Dark Mode')
-      document.body.style.backgroundColor='white';
+      document.body.style.backgroundColor = 'white';
     }
   }
   return (
     <>
-      <Navbar title="TextUtils" AboutUs="About TextUtils" modeup={mode} toggle={change} text={txt}/>
+      <Navbar title="TextUtils" AboutUs="About TextUtils" modeup={mode} toggle={change} text={txt} />
       <div className="container my-3">
-        <TextForm heading="Enter the text to analyse:" summary="Your Text Summary" modeup={mode}/>
+        <TextForm heading="Enter the text to analyse:" summary="Your Text Summary" modeup={mode} />
         {/* <About/> */}
       </div>
     </>
