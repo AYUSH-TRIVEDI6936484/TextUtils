@@ -14,6 +14,9 @@ function App() {
       msg:message,
       type:type
     })
+    setTimeout(() => {
+      setalert(null)
+    }, 1500);
   }
   const [txt, settxt] = useState('Enable dark mode')
   const change = () => {
@@ -35,7 +38,7 @@ function App() {
       <Navbar title="TextUtils" AboutUs="About TextUtils" modeup={mode} toggle={change} text={txt} />
       <Alert alert={alert}/>
       <div className="container my-3">
-        <TextForm heading="Enter the text to analyse:" summary="Your Text Summary" modeup={mode} />
+        <TextForm alert={showalert} heading="Enter the text to analyse:" summary="Your Text Summary" modeup={mode} />
         {/* <About/> */}
       </div>
     </>

@@ -3,20 +3,24 @@ import PropTypes from 'prop-types'
 export default function TextForm(props) {
     const changeup = () => {
         setText(text.toUpperCase());
+        props.alert('Converted to UpperCase!','success')
     }
     const copytxt = () => {
         var text = document.getElementById("mytxt")
         text.select();
         navigator.clipboard.writeText(text.value);
+        props.alert('Your text has been copied','success')
     }
     const changelo = () => {
         setText(text.toLowerCase());
+        props.alert('Converted to LowerCase!','success')
     }
     const handleonchange = (event) => {
         setText(event.target.value);
     }
     const cleartext = () => {
         setText("");
+        props.alert('Cleared Text!','success')
     }
     const resettext = () => {
         setText("Enter text here");
