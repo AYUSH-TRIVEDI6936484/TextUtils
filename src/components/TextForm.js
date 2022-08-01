@@ -24,6 +24,7 @@ export default function TextForm(props) {
     }
     const resettext = () => {
         setText("Enter text here");
+        props.alert('We have reset your text')
     }
     const [text, setText] = useState('Enter text here');
     return (
