@@ -43,7 +43,7 @@ export default function TextForm(props) {
                 <div className="container my-3" style={{ color: props.modeup === 'dark' ? 'white' : 'black' }}>
                     <h1>{props.summary}</h1>
                     <p>{text.split(" ").length} words and {text.length} characters</p>
-                    <p>It takes {0.008 * text.split(" ").length} minutes to read this Text.</p>
+                    <p>It takes {0.008 * text.split(" ").length} minutes to read this text.</p>
                 </div>
                 <div className="container" style={{ color: props.modeup === 'dark' ? 'white' : '#042743' }}>
                     <h2>Preview Text:</h2>
